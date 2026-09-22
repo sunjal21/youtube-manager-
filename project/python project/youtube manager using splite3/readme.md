@@ -1,32 +1,101 @@
-YouTube Manager
+**YouTube Manager**
 
-A simple command-line YouTube Video Manager built with Python and SQLite.
+A simple command-line YouTube Manager built with Python and SQLite.
 
-This project allows you to manage a list of YouTube videos using a local SQLite database. You can add, view, update, and delete videos directly from the terminal.
+This project allows you to manage your YouTube videos from the terminal. You can add, view, update, and delete videos, with all data stored in a local SQLite database.
 
-Features
+*Features*
 
-📋 List all saved videos
+ 📋 List all videos
 
-➕ Add a new video
+ ➕ Add a new video
 
-✏️ Update an existing video
+ ✏️ Update an existing video
 
-🗑️ Delete a video
+ 🗑️ Delete a video
 
-💾 Store video information in a SQLite database
+ 💾 Store video data using SQLite
 
-🔢 Automatically generate a unique ID for each video
+ 🔢 Automatically generate unique video IDs
 
-Technologies Used
+*Technologies Used*
 
-Python 3
+Python
 
-SQLite3
+SQLite
 
-sqlite3 Python standard library
+sqlite3 — Python's built-in SQLite library
 
 No external Python packages are required.
+
+*How It Works*
+
+The application provides a simple menu in the terminal:
+
+Youtube Manager | choose an option
+
+1. List all videos
+2. Add a video
+3. Update a video
+4. Delete a video
+5. Exit app
+
+
+Select an option by entering the corresponding number.
+
+Database
+
+The application creates a SQLite database named:
+
+youtube_manager.db
+
+
+It contains a videos table with the following columns:
+
+*Column	Type	Description*
+id	INTEGER	Unique ID of the video
+name	TEXT	Name of the video
+time	TEXT	Duration of the video
+
+The database and table are created automatically when the application is run.
+
+*Running the Project*
+1. Clone the Repository
+git clone https://github.com/sunjal21/youtube-manager.git
+
+2. Open the Project
+
+Open the downloaded project in PyCharm or any Python IDE.
+
+3. Run the Application
+
+Run the Python file containing the application:
+
+python youtube_manager.py
+
+
+You can also run it directly from PyCharm by clicking the Run button.
+
+Example
+Adding a Video
+Enter your choice: 2
+Enter video name: Python Tutorial
+Enter video duration/time: 15:30
+
+*Listing Videos*
+Enter your choice: 1
+
+1. | Python Tutorial | 15:30
+
+Updating a Video
+Enter your choice: 3
+Enter video ID to update: 1
+Enter updated video name: Python Full Tutorial
+Enter updated video duration/time: 20:45
+
+Deleting a Video
+Enter your choice: 4
+Enter video ID to delete: 1
 
 Project Structure
 youtube-manager/
@@ -36,118 +105,26 @@ youtube-manager/
 └── README.md
 
 
-The youtube_manager.db file is created automatically when you run the application.
+youtube_manager.db is generated automatically when the application runs.
 
-Database
+*Future Improvements*
 
-The application uses SQLite to store video information.
-
-The videos table contains:
-
-Column	Type	Description
-id	INTEGER	Unique ID for each video
-name	TEXT	Name of the video
-time	TEXT	Video duration
-How to Run
-1. Clone the repository
-git clone https://github.com/sunjal21/youtube-manager.git
-
-2. Open the project
-
-Open the project folder in PyCharm or your preferred Python IDE.
-
-3. Run the application
-python youtube_manager.py
-
-
-Depending on your system, you may need:
-
-python3 youtube_manager.py
-
-How to Use
-
-When the application starts, you will see:
-
-Youtube Manager | choose an option
-1. List all videos
-2. Add a video
-3. Update a video
-4. Delete a video
-5. Exit app
-
-Add a Video
-
-Select:
-
-2
-
-
-Then enter the video name and duration.
-
-Example:
-
-Enter video name: Python Tutorial
-Enter video duration/time: 15:30
-
-List Videos
-
-Select:
-
-1
-
-
-Example output:
-
-1. | Python Tutorial | 15:30
-2. | SQLite Tutorial | 20:45
-
-Update a Video
-
-Select:
-
-3
-
-
-Enter the ID of the video you want to update, followed by the new name and duration.
-
-Delete a Video
-
-Select:
-
-4
-
-
-Enter the ID of the video you want to delete.
-
-Exit
-
-Select:
-
-5
-
-
-The application will close and the database connection will be closed.
-
-Future Improvements
-
-Some possible improvements for this project:
-
-Add video URLs
+Add YouTube video URLs
 
 Add search functionality
 
 Add categories or playlists
 
-Add better input validation
+Add input validation
 
 Add error handling
 
-Build a graphical user interface
+Add a graphical user interface
 
-Convert the application into a web application
+Convert the project into a web application
 
-Add timestamps for when videos are added
+*Author*
 
-License
+Sunjal
 
-This project is created for learning and educational purposes.
+*GitHub: sunjal21*
