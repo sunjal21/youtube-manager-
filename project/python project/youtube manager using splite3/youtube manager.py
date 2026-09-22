@@ -18,7 +18,7 @@ cursor.execute(
 def list_videos():
   cursor.execute("SELECT * FROM videos")
   for row in cursor.fetchall():
-    print(f"{row[0]}. || {row[1]} || {row[2]}")
+    print(f"{row[0]}. | {row[1]} | {row[2]}")
 
 
 def add_video(name, time):
